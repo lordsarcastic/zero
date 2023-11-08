@@ -63,7 +63,14 @@ jobs:
           toolchain: stable
           override: true
 
-      - name: Run cargo-tarpaulin
-        uses: actions-rs/tarpaulin@v0.1
+      - name: Install cargo-tarpaulin
+        uses: actions-rs/cargo@v1
         with:
-          args: '--ignore-tests'
+          command: install
+          args: cargo-tarpaulin
+      
+      - name: Run tests with coverage
+        uses: actions-rs/cargo@v1
+        with:
+          command: tarpaulin
+          args: --ignore-tests
