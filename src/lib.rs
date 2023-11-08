@@ -2,10 +2,11 @@ use actix_web::dev::Server;
 use actix_web::{web, App, HttpResponse, HttpServer};
 use std::net::TcpListener;
 
+#[allow(dead_code)]
 #[derive(serde::Deserialize)]
 struct FormData {
     name: String,
-    email: String
+    email: String,
 }
 async fn health_check() -> HttpResponse {
     HttpResponse::Ok().finish()
