@@ -32,12 +32,12 @@ jobs:
       - name: Rust cache action
         uses: Swatinem/rust-cache@v2
         with:
-          key: sqlx-${{ env.SQLX_VERSION }}
+          key: sqlx-${{ vars.SQLX_VERSION }}
 
       - name: Install sqlx-cli
         run: cargo install sqlx-cli
-            --version=${{ env.SQLX_VERSION }}
-            --features ${{ env.SQLX_FEATURES }}
+            --version=${{ vars.SQLX_VERSION }}
+            --features ${{ vars.SQLX_FEATURES }}
             --no-default-features
             --locked
 
@@ -87,12 +87,12 @@ jobs:
       - name: Rust cache action
         uses: Swatinem/rust-cache@v2
         with:
-          key: sqlx-${{ env.SQLX_VERSION }}
+          key: sqlx-${{ vars.SQLX_VERSION }}
 
       - name: Install sqlx-cli
         run: cargo install sqlx-cli
-            --version=${{ env.SQLX_VERSION }}
-            --features ${{ env.SQLX_FEATURES }}
+            --version=${{ vars.SQLX_VERSION }}
+            --features ${{ vars.SQLX_FEATURES }}
             --no-default-features
             --locked
 
@@ -135,12 +135,12 @@ jobs:
       - name: Rust cache action
         uses: Swatinem/rust-cache@v2
         with:
-          key: sqlx-${{ env.SQLX_VERSION }}
+          key: sqlx-${{ vars.SQLX_VERSION }}
 
       - name: Install sqlx-cli
         run: cargo install sqlx-cli
-            --version=${{ env.SQLX_VERSION }}
-            --features ${{ env.SQLX_FEATURES }}
+            --version=${{ vars.SQLX_VERSION }}
+            --features ${{ vars.SQLX_FEATURES }}
             --no-default-features
             --locked
 
