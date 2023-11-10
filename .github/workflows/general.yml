@@ -44,7 +44,7 @@ jobs:
       - name: Install Postgres client
         run: sudo apt-get update && sudo apt-get install postgresql-client -y
 
-      - name: Run migrations:
+      - name: Run migrations
         run: SKIP_DOCKER=true ./scripts/init_db.sh
 
       - name: Run tests
